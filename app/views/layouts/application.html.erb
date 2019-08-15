@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <h2> WELCOME TO TWITTER CLONE APPLICATION</h2>
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "Profile", '#', id: "logo" %>
+          <nav>
+            <ul >
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Help",    '#' %></li>
+              <li><%= link_to "Sign in", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <footer>
+    <p>Developped by: KAVUNA Paul</p>
+    <p>Contact information: <a href="https://mail.google.com/mail/u/0/?hl=en#inbox"> pkavuna@gmail.com</a>.</p>
+  </footer>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

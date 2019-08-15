@@ -1,0 +1,15 @@
+<h3>Send Tweet with the following contents.</h3>
+
+<%= form_with(model: @twee, url: twees_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.hidden_field :created_on %>
+
+  <p>content:<%= @twee.content %></p>
+  <p>Creation Date:<%= @twee.created_on %></p>
+  <%= form.submit  "submit" %>
+<% end %>
+<%= form_with(model: @twee, url: new_twee_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.hidden_field :created_on %>
+  <%= form.submit "back", name: 'back' %>
+<% end %>
